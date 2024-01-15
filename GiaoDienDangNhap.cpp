@@ -38,8 +38,10 @@ void GiaoDienDangNhap::ThucHienDangNhap() {
     setDangNhapThanhCong(false);
     while(btotal){
         while(btaiKhoan){
-            gotoxy(15,5);
-            setTextColor(10,".ĐĂNG NHẬP TÀI KHOẢN");
+            KhungGiaoDien();
+            Nocursortype(FALSE);
+            gotoxy(14,5);
+            setTextColor(10," ĐĂNG NHẬP TÀI KHOẢN");
             gotoxy(70,5);
             setTextColor(10, "THÔNG BÁO");
             gotoxy(70,7);
@@ -51,6 +53,7 @@ void GiaoDienDangNhap::ThucHienDangNhap() {
             gotoxy(16,9);
             Nocursortype(TRUE);
             InputCheckCin(this->taiKhoan);
+            Nocursortype(FALSE);
             if(this->taiKhoan.empty()){
                 gotoxy(16,11);
                 Nocursortype(FALSE);
@@ -74,8 +77,10 @@ void GiaoDienDangNhap::ThucHienDangNhap() {
         }
         while(bmatKhau){
             system("cls");
-            gotoxy(15,5);
-            setTextColor(10,".ĐĂNG NHẬP TÀI KHOẢN");
+            KhungGiaoDien();
+            Nocursortype(FALSE);
+            gotoxy(14,5);
+            setTextColor(10," ĐĂNG NHẬP TÀI KHOẢN");
             gotoxy(70,5);
             setTextColor(10, "THÔNG BÁO");    
             gotoxy(70,7);
@@ -93,10 +98,13 @@ void GiaoDienDangNhap::ThucHienDangNhap() {
             gotoxy(16,11);
             Nocursortype(TRUE);
             InputCheckCin(this->matKhau);
+            Nocursortype(FALSE);
             //
             system("cls");
-            gotoxy(15,5);
-            setTextColor(10,".ĐĂNG NHẬP TÀI KHOẢN");
+            KhungGiaoDien();
+            Nocursortype(FALSE);
+            gotoxy(14,5);
+            setTextColor(10," ĐĂNG NHẬP TÀI KHOẢN");
             gotoxy(70,5);
             setTextColor(10, "THÔNG BÁO");    
             gotoxy(70,7);

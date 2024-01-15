@@ -36,3 +36,48 @@ void GiaoDien::Nocursortype(bool bVisible)
 	Info.dwSize = 20;
 	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &Info);
 }
+
+void GiaoDien::KhungGiaoDien(){
+    for( int i = 0; i <= 98; i++ ){
+        gotoxy(10 + i, 2);
+        setTextColor(15, "_");
+    }
+    for( int i = 0; i <= 98; i++ ){
+        gotoxy(10 + i, 27);
+        setTextColor(15, "_");
+    }
+    Nocursortype(FALSE);
+}
+
+void GiaoDien::KhungGiaoDienLongFirst(){
+	for( int i = 0; i <= 98 + 6 + 8; i++ ){
+        gotoxy(4 + i, 2);
+        setTextColor(15, "_");
+    }
+    for( int i = 0; i <= 98 + 6 + 8; i++ ){
+        gotoxy(4 + i, 27);
+        setTextColor(15, "_");
+    }
+    Nocursortype(FALSE);
+}
+
+void GiaoDien::KhungGiaoDienDanhSachThuVien(){
+	for( int i = 0; i <= 98 + 6 + 8 + 4; i++ ){
+        gotoxy(2 + i, 2);
+        setTextColor(15, "_");
+    }
+    for( int i = 0; i <= 98 + 6 + 8 + 4; i++ ){
+        gotoxy(2 + i, 27);
+        setTextColor(15, "_");
+    }
+	for( int i = 0; i <= 98 + 6 + 8 + 4; i++ ){
+		gotoxy(2 + i, 7);
+        setTextColor(15, "_");
+	}
+
+    Nocursortype(FALSE);
+}
+
+void GiaoDien::KhungLuaChonDanhSachThuVien(){
+	
+}

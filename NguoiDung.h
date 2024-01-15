@@ -5,6 +5,7 @@
 #include "QuyenSach.h"
 #include <conio.h>
 #include <windows.h>
+#include <iostream>
 
 class NguoiDung : public GiaoDienDangNhap, QuyenSach{
 public:
@@ -27,9 +28,9 @@ public:
     void InRaDanhSachSach();
     void TimKiemThongTinSach(bool &run, bool caseAdmin, std::string first = "", std::string second = "");
     void ThongBaoDanhSachTimKiem();
-    void TimKiemEngine(const std::string& keyTimKiem, std::vector<std::string> VtimKiem, bool &run);
-    void TimKiemEngineNamXuatBan(const std::string& keyTimKiem, bool &run);
-    void TimKiemEngineChuDe(const std::string& keyTimKiem, bool &run);
+    void TimKiemEngine(const std::string& keyTimKiem, std::vector<std::string> VtimKiem, bool &run, std::string first = "", std::string second = "");
+    void TimKiemEngineNamXuatBan(const std::string& keyTimKiem, bool &run, std::string first = "", std::string second = "");
+    void TimKiemEngineChuDe(const std::string& keyTimKiem, bool &run, std::string first = "", std::string second = "");
     static void DaoNguocChuoi(std::string &key);
     void ThemSachCoSanTrongThuVien();
     void ThemNguoiDungCoSan();
@@ -42,6 +43,7 @@ public:
     //
     void KhungNguoiDung();
     void NonAdminStatusDanhSachSach();
+    void KhungXuLiLuaChonDangNhapDangKy();
 };
 
 

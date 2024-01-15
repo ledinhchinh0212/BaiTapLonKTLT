@@ -122,8 +122,10 @@ void GiaoDienDangKy::ThucHienDangKy(){
     bool bmatKhau = false;
     while(btotal){
         while(btenNguoiDung){
-            gotoxy(15,5);
-            setTextColor(10,".ĐĂNG KÝ TÀI KHOẢN");
+            KhungGiaoDien();
+            Nocursortype(FALSE);
+            gotoxy(14,5);
+            setTextColor(10," ĐĂNG KÝ TÀI KHOẢN");
             gotoxy(70,5);
             setTextColor(10, "THÔNG BÁO");    
             gotoxy(70,7);
@@ -170,8 +172,10 @@ void GiaoDienDangKy::ThucHienDangKy(){
         }
         while(btenTaiKhoan){
             system("cls");
-            gotoxy(15,5);
-            setTextColor(10,".ĐĂNG KÝ TÀI KHOẢN");
+            KhungGiaoDien();
+            Nocursortype(FALSE);
+            gotoxy(14,5);
+            setTextColor(10," ĐĂNG KÝ TÀI KHOẢN");
             gotoxy(70,5);
             setTextColor(10, "THÔNG BÁO");    
             gotoxy(70,7);
@@ -189,6 +193,7 @@ void GiaoDienDangKy::ThucHienDangKy(){
             gotoxy(16,11);
             Nocursortype(TRUE);
             InputCheckCin(this->tenTaiKhoan);
+            Nocursortype(FALSE);
             if(this->tenTaiKhoan.empty()){
                 Nocursortype(FALSE);
                 gotoxy(15,13);
@@ -235,8 +240,10 @@ void GiaoDienDangKy::ThucHienDangKy(){
         }
         while(bmatKhau){
             system("cls");
-            gotoxy(15,5);
-            setTextColor(10,".ĐĂNG KÝ TÀI KHOẢN");
+            KhungGiaoDien();
+            Nocursortype(FALSE);
+            gotoxy(14,5);
+            setTextColor(10," ĐĂNG KÝ TÀI KHOẢN");
             gotoxy(70,5);
             setTextColor(10, "THÔNG BÁO");    
             gotoxy(70,7);
@@ -258,6 +265,7 @@ void GiaoDienDangKy::ThucHienDangKy(){
             gotoxy(16,13);
             Nocursortype(TRUE);
             InputCheckCin(this->matKhau);
+            Nocursortype(FALSE);
             if(this->matKhau.empty()){
                 gotoxy(15,15);
                 Nocursortype(FALSE);
@@ -294,8 +302,10 @@ void GiaoDienDangKy::ThucHienDangKy(){
             }
             // loading lại màn hìnhsystem("cls");
             system("cls");
-            gotoxy(15,5);
-            setTextColor(10,".ĐĂNG KÝ TÀI KHOẢN");
+            KhungGiaoDien();
+            Nocursortype(FALSE);
+            gotoxy(14,5);
+            setTextColor(10," ĐĂNG KÝ TÀI KHOẢN");
             gotoxy(70,5);
             setTextColor(10, "THÔNG BÁO");    
             gotoxy(70,7);

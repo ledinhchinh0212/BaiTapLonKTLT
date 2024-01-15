@@ -11,6 +11,10 @@ public:
     void setTextColor(int color, std::string text);
     void ShowCur(bool CursorVisibility);
     void Nocursortype(bool bVisible);
+    void KhungGiaoDien();
+    void KhungGiaoDienLongFirst();
+    void KhungGiaoDienDanhSachThuVien();
+    void KhungLuaChonDanhSachThuVien();
 };
 
 #endif //KHONGBIETLUON_GIAODIEN_H
