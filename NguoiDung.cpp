@@ -163,7 +163,9 @@ void NguoiDung::InRaDanhSachNguoiDung() {
     textcolor(15);
     for( int i = 0; i < this->VtenNguoiDung.size(); i++ ){
         gotoxy(5,11 + i);
-        std::cout <<  this->VuserID[i] << "\t" << this->VtenNguoiDung[i] << std::endl;
+        setTextColor(15,this->VuserID[i]);
+        gotoxy(16,11 + i);
+        setTextColor(15,this->VtenNguoiDung[i]);
     }
 }
 
@@ -175,10 +177,18 @@ void NguoiDung::InRaDanhSachSach() {
     gotoxy(1,13); // start in index 13??
     textcolor(15);
     for( int i = 0; i < this->VmaSoSach.size(); i++ ){
-        std::cout << this->VmaSoSach[i] << "\t\t" << this->VtenSach[i] << "\t\t" << this->VchuDe[i]
-        << "\t" << VtacGia[i]
-        << "\t\t" << this->VnhaXuatBan[i]
-        << "\t\t" << this->VngayThangXuatBan[i] << std::endl;
+        gotoxy(1,13 + i);
+        setTextColor(15, this->VmaSoSach[i]);
+        gotoxy(17,13 + i);
+        setTextColor(15, this->VtenSach[i]);
+        gotoxy(41,13 + i);
+        setTextColor(15, this->VchuDe[i]);
+        gotoxy(57,13 + i);
+        setTextColor(15,  this->VtacGia[i]);
+        gotoxy(81,13 + i);
+        setTextColor(15,  this->VnhaXuatBan[i]);
+        gotoxy(105,13 + i);
+        setTextColor(15,  this->VngayThangXuatBan[i]);
     }
 }
 
@@ -202,17 +212,17 @@ void NguoiDung::ThongBaoQuanLiSach() {
 
 void NguoiDung::ThongBaoDanhSachTimKiem() {
     gotoxy(1,13 + this->VtenSach.size() + 1);
-    std::cout << "1. Tìm kiếm theo tên sách" << std::endl;
+    setTextColor(15,"1. Tìm kiếm theo tên sách");
     gotoxy(1,13 + this->VtenSach.size() + 3);
-    std::cout << "2. Tìm kiếm theo chủ đề" << std::endl;
+    setTextColor(15,"2. Tìm kiếm theo chủ đề");
     gotoxy(1,13 + this->VtenSach.size() + 5);
-    std::cout << "3. Tìm kiếm theo tác giả" << std::endl;
+    setTextColor(15,"3. Tìm kiếm theo tác giả");
     gotoxy(1,13 + this->VtenSach.size() + 7);
-    std::cout << "4. Tìm kiếm theo nhà xuất bản" << std::endl;
+    setTextColor(15,"4. Tìm kiếm theo nhà xuất bản");
     gotoxy(1,13 + this->VtenSach.size() + 9);
-    std::cout << "5. Tìm kiếm theo năm xuất bản" << std::endl;
+    setTextColor(15,"5. Tìm kiếm theo năm xuất bản");
     gotoxy(1,13 + this->VtenSach.size() + 11);
-    std::cout << "6. Quay lại" << std::endl;
+    setTextColor(15,"6. Quay lại");
 }
 
 void NguoiDung::DaoNguocChuoi(std::string &key) {
@@ -357,6 +367,7 @@ void NguoiDung::TimKiemEngineChuDe(const std::string& keyTimKiem, bool &run, std
         gotoxy(1,11);
         setTextColor(14,"Mã số sách\tTên sách\t\tChủ đề\t\tTác giả\t\t\tNhà xuất bản\t\tNgày xuất bản");
         textcolor(15);
+        int count = 0;
         for( int i = 0; i < this->VchuDe.size(); i++ ){
             std::string c;
             c = "";
@@ -372,10 +383,19 @@ void NguoiDung::TimKiemEngineChuDe(const std::string& keyTimKiem, bool &run, std
                 c += ch;
             }
             if(c == keyTimKiem){
-                std::cout << this->VmaSoSach[i] << "\t\t" << this->VtenSach[i] << "\t\t" << this->VchuDe[i]
-                          << "\t" << VtacGia[i]
-                          << "\t\t" << this->VnhaXuatBan[i]
-                          << "\t\t" << this->VngayThangXuatBan[i] << std::endl;
+                gotoxy(1,13 + count);
+                setTextColor(15, this->VmaSoSach[i]);
+                gotoxy(17,13 + count);
+                setTextColor(15, this->VtenSach[i]);
+                gotoxy(41,13 + count);
+                setTextColor(15, this->VchuDe[i]);
+                gotoxy(57,13 + count);
+                setTextColor(15,  this->VtacGia[i]);
+                gotoxy(81,13 + count);
+                setTextColor(15,  this->VnhaXuatBan[i]);
+                gotoxy(105,13 + count);
+                setTextColor(15,  this->VngayThangXuatBan[i]);
+                count++;
             }
         }
     }
@@ -431,6 +451,7 @@ void NguoiDung::TimKiemEngineNamXuatBan(const std::string& keyTimKiem, bool &run
         gotoxy(1,11);
         setTextColor(14,"Mã số sách\tTên sách\t\tChủ đề\t\tTác giả\t\t\tNhà xuất bản\t\tNgày xuất bản");
         textcolor(15);
+        int count = 0;
         for( int i = 0; i < this->VngayThangXuatBan.size(); i++ ){
             std::string c = this->VngayThangXuatBan[i];
             std::string split;
@@ -444,10 +465,19 @@ void NguoiDung::TimKiemEngineNamXuatBan(const std::string& keyTimKiem, bool &run
             }
             DaoNguocChuoi(split);
             if(split == keyTimKiem){
-                std::cout << this->VmaSoSach[i] << "\t\t" << this->VtenSach[i] << "\t\t" << this->VchuDe[i]
-                          << "\t" << VtacGia[i]
-                          << "\t\t" << this->VnhaXuatBan[i]
-                          << "\t\t" << this->VngayThangXuatBan[i] << std::endl;
+                gotoxy(1,13 + count);
+                setTextColor(15, this->VmaSoSach[i]);
+                gotoxy(17,13 + count);
+                setTextColor(15, this->VtenSach[i]);
+                gotoxy(41,13 + count);
+                setTextColor(15, this->VchuDe[i]);
+                gotoxy(57,13 + count);
+                setTextColor(15,  this->VtacGia[i]);
+                gotoxy(81,13 + count);
+                setTextColor(15,  this->VnhaXuatBan[i]);
+                gotoxy(105,13 + count);
+                setTextColor(15,  this->VngayThangXuatBan[i]);
+                count++;
             }
         }
     }
@@ -493,12 +523,22 @@ void NguoiDung::TimKiemEngine(const std::string& keyTimKiem, std::vector<std::st
         gotoxy(1,11);
         setTextColor(14,"Mã số sách\tTên sách\t\tChủ đề\t\tTác giả\t\t\tNhà xuất bản\t\tNgày xuất bản");
         textcolor(15);
+        int count = 0;
         for( int i  = 0; i < VtimKiem.size(); i++ ){
             if(VtimKiem[i] == keyTimKiem){
-                std::cout << this->VmaSoSach[i] << "\t\t" << this->VtenSach[i] << "\t\t" << this->VchuDe[i]
-                          << "\t" << VtacGia[i]
-                          << "\t\t" << this->VnhaXuatBan[i]
-                          << "\t\t" << this->VngayThangXuatBan[i] << std::endl;
+                gotoxy(1,13 + count);
+                setTextColor(15, this->VmaSoSach[i]);
+                gotoxy(17,13 + count);
+                setTextColor(15, this->VtenSach[i]);
+                gotoxy(41,13 + count);
+                setTextColor(15, this->VchuDe[i]);
+                gotoxy(57,13 + count);
+                setTextColor(15,  this->VtacGia[i]);
+                gotoxy(81,13 + count);
+                setTextColor(15,  this->VnhaXuatBan[i]);
+                gotoxy(105,13 + count);
+                setTextColor(15,  this->VngayThangXuatBan[i]);
+                count++;
             }
         }
     }
@@ -537,6 +577,9 @@ void NguoiDung::NonAdminStatusDanhSachSach(){
 
 void NguoiDung::TimKiemThongTinSach(bool &run, bool caseAdmin, std::string first, std::string second) {
     bool loop = true;
+    std::string Copy = "1. Tìm kiếm theo tên sách";
+    int x = 1;
+    int y = 13 + this->VtenSach.size() + 1;
     while(loop){
         system("cls");
         if(!caseAdmin){
@@ -550,12 +593,11 @@ void NguoiDung::TimKiemThongTinSach(bool &run, bool caseAdmin, std::string first
         }
         // need fixing
         InRaDanhSachSach();
+        KhungGiaoDienDanhSachThuVien();
         gotoxy(1,13 + this->VtenSach.size() + 1);
         ThongBaoDanhSachTimKiem();
-        gotoxy(1,13 + this->VtenSach.size() + 1);
-        setTextColor(12, "1. Tìm kiếm theo tên sách");
-        int x = 1;
-        int y = 13 + this->VtenSach.size() + 1;
+        gotoxy(x,y);
+        setTextColor(12, Copy);
         bool bTimKiemMain = true;
         while(bTimKiemMain){
             char TimKiemMain = _getch();
@@ -672,6 +714,7 @@ void NguoiDung::TimKiemThongTinSach(bool &run, bool caseAdmin, std::string first
                 }
                 case 13:{
                     if(y == 13 + this->VtenSach.size() + 1){
+                        Copy = "1. Tìm kiếm theo tên sách";
                         system("cls");
                         bool btimKiemNoiDung = true;
                         while(btimKiemNoiDung){
@@ -732,6 +775,7 @@ void NguoiDung::TimKiemThongTinSach(bool &run, bool caseAdmin, std::string first
                         }
                     }
                     else if(y == 13 + this->VtenSach.size() + 3){
+                        Copy = "2. Tìm kiếm theo chủ đề";
                         system("cls");
                         bool btimKiemNoiDung = true;
                         while(btimKiemNoiDung){
@@ -793,7 +837,7 @@ void NguoiDung::TimKiemThongTinSach(bool &run, bool caseAdmin, std::string first
                     }
                     else if(y == 13 + this->VtenSach.size() + 5){
                         system("cls");
-                        
+                        Copy = "3. Tìm kiếm theo tác giả";
                         bool btimKiemNoiDung = true;
                         while(btimKiemNoiDung){
                             if(!caseAdmin){
@@ -854,6 +898,7 @@ void NguoiDung::TimKiemThongTinSach(bool &run, bool caseAdmin, std::string first
                     }
                     else if(y == 13 + this->VtenSach.size() + 7){
                         system("cls");
+                        Copy = "4. Tìm kiếm theo nhà xuất bản";
                         bool btimKiemNoiDung = true;
                         while(btimKiemNoiDung){
                             if(!caseAdmin){
@@ -914,6 +959,7 @@ void NguoiDung::TimKiemThongTinSach(bool &run, bool caseAdmin, std::string first
                     }
                     else if(y == 13 + this->VtenSach.size() + 9){
                         system("cls");
+                        Copy = "5. Tìm kiếm theo năm xuất bản";
                         bool btimKiemNoiDung = true;
                         while(btimKiemNoiDung){
                             if(!caseAdmin){
@@ -1018,7 +1064,6 @@ bool NguoiDung::KiemTraKiTuNgayThangNam(const std::string& date) {
     return true;
 }
 
-
 bool NguoiDung::KiemTraTinhHopLeNamXuatBan(const std::string& ngay,const std::string& thang ,const std::string& nam) {
     if(!KiemTraKiTuNgayThangNam(ngay) || !KiemTraKiTuNgayThangNam(thang) || !KiemTraKiTuNgayThangNam(nam)){
         return false;
@@ -1065,22 +1110,23 @@ bool NguoiDung::KiemTraTinhHopLeNamXuatBan(const std::string& ngay,const std::st
 void NguoiDung::QuanLiNguoiDung() {
     if(getCheckAdmin()){ // admin
         bool bloopMain = true;
+        int x = 11;
+        int y = 7;
+        std::string Copy = "1. Quản lí người dùng";
         while(bloopMain){
             // tracking
             system("cls");
             KhungGiaoDien();
             Nocursortype(FALSE);
             GiaoDienAdmin();
-            gotoxy(11,7);
+            gotoxy(x,y);
             textcolor(15);
-            setTextColor(12,"1. Quản lí người dùng");
+            setTextColor(12,Copy);
             gotoxy(11,5);
             setTextColor(10,"TRANG CHỦ:");
             KhungNguoiDung();
             gotoxy(70,15);
             setTextColor(10, "THÔNG BÁO"); 
-            int x = 11;
-            int y = 7;
             // rebuild
             bool bloopMainIn = true;
             while(bloopMainIn){
@@ -1144,6 +1190,11 @@ void NguoiDung::QuanLiNguoiDung() {
                     }
                     case 13:{
                         if(y == 7){
+                            Copy = "1. Quản lí người dùng";
+                            //
+                            int xx = 11;
+                            int yy = 7;
+                            std::string Copy_1 = "1. Thêm người dùng";
                             system("cls");
                             //
                             bool bloopnhapQuanLi = true;
@@ -1155,14 +1206,11 @@ void NguoiDung::QuanLiNguoiDung() {
                                 gotoxy(21,5);
                                 setTextColor(10,"QUẢN LÍ NGƯỜI DÙNG");
                                 ThongBaoQuanLiNguoiDung();
-                                gotoxy(11,7);
-                                textcolor(15);
-                                setTextColor(12,"1. Thêm người dùng");
+                                gotoxy(xx,yy);
+                                setTextColor(12,Copy_1);
                                 KhungNguoiDung();
                                 gotoxy(70,15);
                                 setTextColor(10, "THÔNG BÁO"); 
-                                int xx = 11;
-                                int yy = 7;
                                 bool  bNhapChinhSuaTaiKhoan = true;
                                 while(bNhapChinhSuaTaiKhoan){
                                     char nhapChinhSuaTaiKhoan = _getch();
@@ -1259,6 +1307,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                         }
                                         case 13:{
                                             if(yy == 7){
+                                                Copy_1 = "1. Thêm người dùng";
                                                 bool bthemNguoiDung = true;
                                                 while(bthemNguoiDung){
                                                     system("cls");
@@ -1353,6 +1402,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                 }
                                             }
                                             else if(yy == 9){
+                                                Copy_1 = "2. Xoá người dùng";
                                                 bool bxoaNguoiDung = true;
                        	                        while(bxoaNguoiDung){
                                                     system("cls");
@@ -1426,6 +1476,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                 }
                                             }
                                             else if(yy == 11){
+                                                Copy_1 = "3. Sửa đổi thông tin người dùng";
                                                 bool bSuaDoiThongTinNguoiDung = true; // father
                                                 bool nhapUserID = true; // son
                                                 bool nhapThayDoiThongTin = false; // son
@@ -1578,8 +1629,9 @@ void NguoiDung::QuanLiNguoiDung() {
                                                 }
                                             }
                                             else if(yy == 13){
+                                                Copy_1 = "4. Xem danh sách người dùng";
                                                 system("cls");
-                                                KhungGiaoDienLongFirst();
+                                                khungdanhsachnguoidung();
                                                 Nocursortype(FALSE);
                                                 gotoxy(11,5);
                                                 setTextColor(11,"QUẢN LÍ NGƯỜI DÙNG");
@@ -1614,8 +1666,13 @@ void NguoiDung::QuanLiNguoiDung() {
                             }
                         }
                         else if(y == 9){
-                            system("cls");
                             // quan li sach trong thu vien
+                            Copy = "2. Quản lí sách trong thư viện";
+                            //
+                            std::string Copy_1 = "1. Thêm sách";
+                            int xx = 11;
+                            int yy = 7;
+                            system("cls");
                             bool bloopnhapQuanLi = true;
                             while(bloopnhapQuanLi){
                                 KhungGiaoDien();
@@ -1625,15 +1682,12 @@ void NguoiDung::QuanLiNguoiDung() {
                                 gotoxy(21,5);
                                 setTextColor(10,"QUẢN LÍ SÁCH TRONG THƯ VIỆN");
                                 ThongBaoQuanLiSach();
-                                gotoxy(11,7);
-                                textcolor(15);
-                                setTextColor(12,"1. Thêm sách");
+                                gotoxy(xx,yy);
+                                setTextColor(12,Copy_1);
                                 KhungNguoiDung();
                                 gotoxy(70,15);
                                 setTextColor(10, "THÔNG BÁO"); 
                                 // start
-                                int xx = 11;
-                                int yy = 7;
                                 bool  bNhapChinhSuaTaiKhoan = true;
                                 while(bNhapChinhSuaTaiKhoan){
                                     char nhapChinhSuaTaiKhoan = _getch();
@@ -1731,6 +1785,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                         case 13:{
                                             if(yy == 7){
                                                 // them sach
+                                                Copy_1 = "1. Thêm sách";
                                                 bool bThemSach = true;
                                                 bool btenSach = true;
                                                 bool bchuDe = false;
@@ -2217,6 +2272,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                             }
                                             else if(yy == 9){
                                                 // xoa sach
+                                                Copy_1 = "2. Xoá sách";
                                                 system("cls");
                                                 bool bxoaSach = true;
                                                 while(bxoaSach){
@@ -2227,6 +2283,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                     KhungGiaoDienDanhSachThuVien();
                                                     Nocursortype(FALSE);
                                                     InRaDanhSachSach();
+                                                    KhungGiaoDienDanhSachThuVien();
                                                     gotoxy(70,13 + this->VtenSach.size() + 1);
                                                     setTextColor(10, "THÔNG BÁO"); 
                                                     gotoxy(70,13 + this->VtenSach.size() + 1 + 2);
@@ -2289,6 +2346,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                             else if(yy == 11){
                                                 // sua doi thong tin sach
                                                 system("cls");
+                                                Copy_1 = "3. Sửa đổi thông tin sách";
                                                 bool bnhapQuanLi = true;
                                                 while(bnhapQuanLi){
                                                     gotoxy(11,5);
@@ -2348,6 +2406,9 @@ void NguoiDung::QuanLiNguoiDung() {
                                                     }
                                                     // main options
                                                     bool bmainChinhSua = true;
+                                                    int xxx = 11;
+                                                    int yyy = 7;
+                                                    std::string Copy_2 = "1. Chỉnh sửa tên sách";
                                                     while(bmainChinhSua){
                                                         system("cls");
                                                         KhungGiaoDien();
@@ -2360,10 +2421,8 @@ void NguoiDung::QuanLiNguoiDung() {
                                                         gotoxy(70,15);
                                                         setTextColor(10, "THÔNG BÁO");
                                                         ThongBaoNhapSuaDoiThongTinSach();
-                                                        gotoxy(11,7);
-                                                        setTextColor(12,"1. Chỉnh sửa tên sách");
-                                                        int xxx = 11;
-                                                        int yyy = 7;
+                                                        gotoxy(xxx,yyy);
+                                                        setTextColor(12,Copy_2);
                                                         bool bsuadoithongtinsach = true;
                                                         while(bsuadoithongtinsach){
                                                             char suaDoiThongTinSach = _getch();
@@ -2526,6 +2585,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                 }
                                                                 case 13:{ // da co ma so sach
                                                                     if(yyy == 7){
+                                                                        Copy_2 = "1. Chỉnh sửa tên sách";
                                                                         bool bchinhSuaTenSach = true;
                                                                         while(bchinhSuaTenSach){
                                                                             system("cls");
@@ -2589,6 +2649,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                         }
                                                                     }
                                                                     if(yyy == 9){
+                                                                        Copy_2 = "2. Chỉnh sửa chủ đề";
                                                                         bool bchinhSuaChuDeSach = true;
                                                                         while(bchinhSuaChuDeSach){
                                                                             system("cls");
@@ -2638,6 +2699,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                         }
                                                                     }
                                                                     else if(yyy == 11){
+                                                                        Copy_2 = "3. Chỉnh sửa tác giả";
                                                                         bool bchinhSuaTacGiaSach = true;
                                                                         while(bchinhSuaTacGiaSach){
                                                                             system("cls");
@@ -2702,6 +2764,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                         }
                                                                     }
                                                                     else if(yyy == 13){
+                                                                        Copy_2 = "4. Chỉnh sửa nhà xuất bản";
                                                                         // chinh sua nha xuat ban
                                                                         bool bchinhSuaNhaXBSach = true;
                                                                         while(bchinhSuaNhaXBSach){
@@ -2752,7 +2815,11 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                         }
                                                                     }
                                                                     else if(yyy == 15){
+                                                                        Copy_2 = "5. Chỉnh sửa ngày tháng xuất bản";
                                                                         // chinh sua ngay thang xuat ban
+                                                                        int x4 = 11;
+                                                                        int y4 = 7;
+                                                                        std::string Copy_3 = "1. Chỉnh sửa ngày";
                                                                         bool bchinhSuaNgayThangXuatBan = true;
                                                                         bool bchinhSuaNgay = false;
                                                                         bool bchinhSuaThang = false;
@@ -2771,10 +2838,8 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                             setTextColor(10, "THÔNG BÁO");
                                                                             LuaChonChinhSuaNgayThangXuatBan();
                                                                             //
-                                                                            int x4 = 11;
-                                                                            int y4 = 7;
                                                                             gotoxy(x4,y4);
-                                                                            setTextColor(12,"1. Chỉnh sửa ngày");
+                                                                            setTextColor(12, Copy_3);
                                                                             bool bLuaChonNgayThangNam = true;
                                                                             while(bLuaChonNgayThangNam){
                                                                                 char luaChonNgayThangNam = _getch();
@@ -2853,6 +2918,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                                     }
                                                                                     case 13:{
                                                                                         if(y4 == 7){
+                                                                                            Copy_3 = "1. Chỉnh sửa ngày";
                                                                                             // chinh sua ngay
                                                                                             bchinhSuaNgay = true;
                                            	                                                while(bchinhSuaNgay){
@@ -2905,6 +2971,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                                             }
                                                                                         }
                                                                                         if(y4 == 9){
+                                                                                            Copy_3 = "1. Chỉnh sửa tháng";
                                                                                             // chinh sua thang
                                                                                             bchinhSuaThang = true;
                                                                                             while(bchinhSuaThang){
@@ -2957,6 +3024,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                                             }
                                                                                         }
                                                                                         else if(y4 == 11){
+                                                                                            Copy_3 = "1. Chỉnh sửa năm";
                                                                                             // chinh sua nam
                                                                                             bchinhSuaNam = true;
                                                                                             while(bchinhSuaNam){
@@ -3024,6 +3092,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                         }
                                                                     }
                                                                     else if(yyy == 17){
+                                                                        Copy_2 = "6. Chỉnh sửa số trang";
                                                                         // chinh sua so trang
                                                                         bool bchinhSuaSoTrang = true;
                                                                         while(bchinhSuaSoTrang){
@@ -3071,6 +3140,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                         }
                                                                     }
                                                                     else if(yyy == 19){
+                                                                        Copy_2 = "7. Chỉnh sửa số bản copy trong thư viện";
                                                                         // chinh sua so ban copy trong thu vien
                                                                         bool bchinhSuaSoBanCopy = true;
                                                                         while(bchinhSuaSoBanCopy){
@@ -3128,6 +3198,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                             }
                                             else if(yy == 13){
                                                 // xem danh sach sach trong thu vien
+                                                Copy_1 = "4. Xem danh sách sách trong thư viện";
                                                 bool bLoopDanhSachSach = true;
                                                 while(bLoopDanhSachSach){
                                                     system("cls");
@@ -3136,10 +3207,11 @@ void NguoiDung::QuanLiNguoiDung() {
                                                     gotoxy(39,5);
                                                     setTextColor(10,"XEM DANH SÁCH SÁCH TRONG THƯ VIỆN");
                                                     InRaDanhSachSach();
+                                                    KhungGiaoDienDanhSachThuVien();
                                                     gotoxy(1,13 + this->VtenSach.size() + 1);
                                                     std::cout << "1. Tìm kiếm sách dựa trên từ khoá" << std::endl;
                                                     gotoxy(1,13 + this->VtenSach.size() + 3);
-                                                    std::cout << "2. Quay lại" << std::endl;
+                                                    setTextColor(15,"2. Quay lại");
                                                     gotoxy(1,13 + this->VtenSach.size() + 1);
                                                     setTextColor(12,"1. Tìm kiếm sách dựa trên từ khoá");
                                                     int xx = 1;
@@ -3245,21 +3317,21 @@ void NguoiDung::QuanLiNguoiDung() {
     }
     else{ // nguoi dung binh thuong
         bool bloopMain = true;
+        std::string Copy = "1. Xem danh sách sách trong thư viện";
+        int x = 11;
+        int y = 7;
         while(bloopMain){
         	system("cls");
             KhungGiaoDien();
             Nocursortype(FALSE);
             GiaoDienNonAdmin();
-            gotoxy(11,7);
-            textcolor(15);
-            setTextColor(12,"1. Xem danh sách sách trong thư viện");
+            gotoxy(x,y);
+            setTextColor(12,Copy);
             gotoxy(11,5);
             setTextColor(10,"TRANG CHỦ:");
             KhungNguoiDung();
             gotoxy(70,15);
             setTextColor(10, "THÔNG BÁO"); 
-            int x = 11;
-            int y = 7;
             // rebuild 
             bool bloopMainIn = true;
             while(bloopMainIn){
@@ -3323,6 +3395,7 @@ void NguoiDung::QuanLiNguoiDung() {
                     }
                     case 13:{
                         if(y == 7){
+                            Copy = "1. Xem danh sách sách trong thư viện";
                             system("cls");
                             // xem danh sach sach trong thu vien
                             bool bloopnhapQuanLi = true;
@@ -3334,10 +3407,9 @@ void NguoiDung::QuanLiNguoiDung() {
                                 // need proccess
                                 gotoxy(1,7);
                                 InRaDanhSachSach();
-                                gotoxy(1,13 + this->VtenSach.size() + 1);
-                                std::cout << "1. Tìm kiếm sách dựa trên từ khoá" << std::endl;
+                                KhungGiaoDienDanhSachThuVien();
                                 gotoxy(1,13 + this->VtenSach.size() + 3);
-                                std::cout << "2. Quay lại" << std::endl;
+                                setTextColor(15,"2. Quay lại");
                                 gotoxy(1,13 + this->VtenSach.size() + 1);
                                 setTextColor(12,"1. Tìm kiếm sách dựa trên từ khoá");
                                 int xx = 1;
@@ -3410,9 +3482,13 @@ void NguoiDung::QuanLiNguoiDung() {
                             }
                         }
                         if(y == 9){
+                            Copy = "2. Chỉnh sửa thông tin tài khoản";
                             //* cracking 
                             system("cls");
                             // chinh sua thong tin nguoi dung
+                            std::string Copy_1 = "1. Đổi tên người dùng";
+                            int xx = 11;
+                            int yy = 7;
                             bool bloopnhapQuanLi = true;
                             while(bloopnhapQuanLi){
                                 KhungGiaoDien();
@@ -3421,17 +3497,13 @@ void NguoiDung::QuanLiNguoiDung() {
                                 setTextColor(11,"TRANG CHỦ");
                                 gotoxy(21,5);
                                 setTextColor(10,"CHỈNH SỬA THÔNG TIN TÀI KHOẢN");
-                                 // start fixing
+                                // start fixing
                                 ThongBaoChinhSuaThongTinTaiKhoan();
-                                gotoxy(11,7);
-                                textcolor(15);
-                                setTextColor(12,"1. Đổi tên người dùng");
+                                gotoxy(xx,yy);
+                                setTextColor(12,Copy_1);
                                 KhungNguoiDung();
                                 gotoxy(70,15);
                                 setTextColor(10, "THÔNG BÁO"); 
-                                //
-                                int xx = 11;
-                                int yy = 7;
                                 bool  bNhapChinhSuaTaiKhoan = true;
                                 while(bNhapChinhSuaTaiKhoan){
                                     char nhapChinhSuaTaiKhoan = _getch();
@@ -3510,6 +3582,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                         }
                                         case 13:{
                                             if(yy == 7){
+                                                Copy_1 = "1. Đổi tên người dùng";
                                                 bool bdoiTenNguoiDung = true;
                                                 while(bdoiTenNguoiDung){
                                                     system("cls");
@@ -3566,6 +3639,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                 }
                                             }
                                             else if(yy == 9){
+                                                Copy_1  = "2. Đổi mật khẩu";
                                                 bool bdoiMatKhau = true;
                                                 while(bdoiMatKhau){
                                                     system("cls");
@@ -3687,6 +3761,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                 }
                                             }
                                             else if(yy == 11){
+                                                Copy_1  = "3. Xoá tài khoản";
                                                 bool bxoaTaiKhoan = true;
                                                 while(bxoaTaiKhoan){
                                                     system("cls");

@@ -54,22 +54,16 @@ void GiaoDien::KhungGiaoDienLongFirst(){
         gotoxy(4 + i, 2);
         setTextColor(15, "_");
     }
-    for( int i = 0; i <= 98 + 6 + 8; i++ ){
-        gotoxy(4 + i, 27);
-        setTextColor(15, "_");
-    }
     Nocursortype(FALSE);
 }
 
 void GiaoDien::KhungGiaoDienDanhSachThuVien(){
+    // phan dau
 	for( int i = 0; i <= 98 + 6 + 8 + 4; i++ ){
         gotoxy(2 + i, 2);
         setTextColor(15, "_");
     }
-    for( int i = 0; i <= 98 + 6 + 8 + 4; i++ ){
-        gotoxy(2 + i, 27);
-        setTextColor(15, "_");
-    }
+    // phan giua
 	for( int i = 0; i <= 98 + 6 + 8 + 4; i++ ){
 		gotoxy(2 + i, 7);
         setTextColor(15, "_");
@@ -78,6 +72,10 @@ void GiaoDien::KhungGiaoDienDanhSachThuVien(){
     Nocursortype(FALSE);
 }
 
-void GiaoDien::KhungLuaChonDanhSachThuVien(){
-	
+void GiaoDien::khungdanhsachnguoidung(){
+	for( int i = 0; i <= 98 + 6 + 8; i++ ){
+        gotoxy(4 + i, 2);
+        setTextColor(15, "_");
+    }
+    Nocursortype(FALSE);
 }

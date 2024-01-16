@@ -14,7 +14,7 @@ public:
     void KhungGiaoDien();
     void KhungGiaoDienLongFirst();
     void KhungGiaoDienDanhSachThuVien();
-    void KhungLuaChonDanhSachThuVien();
+    void khungdanhsachnguoidung();
 };
 
 #endif //KHONGBIETLUON_GIAODIEN_H

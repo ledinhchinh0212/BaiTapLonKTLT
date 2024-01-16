@@ -201,6 +201,13 @@ void GiaoDienDangKy::ThucHienDangKy(){
                 Loading();
                 continue;
             }
+            if(this->tenTaiKhoan == "admin"){
+                gotoxy(15,13);
+                Nocursortype(FALSE);
+                setTextColor(12,"Bạn không thể đăng ký tài khoản này, vui lòng nhập lại");
+                Loading();
+                continue;
+            }
             if(this->tenTaiKhoan == "1"){
                 system("cls");
                 Nocursortype(FALSE);
