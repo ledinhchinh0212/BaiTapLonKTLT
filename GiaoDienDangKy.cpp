@@ -122,6 +122,7 @@ void GiaoDienDangKy::ThucHienDangKy(){
     bool bmatKhau = false;
     while(btotal){
         while(btenNguoiDung){
+            system("cls");
             KhungGiaoDien();
             Nocursortype(FALSE);
             gotoxy(14,5);
@@ -158,11 +159,8 @@ void GiaoDienDangKy::ThucHienDangKy(){
             if(this->tenNguoiDung == "1"){
             	system("cls");
                 Nocursortype(FALSE);
-                gotoxy(50,10);
-                setTextColor(14,"Quay lại màn hình chính..");
-                Loading();
+                RealityLoading("Quay lại..", btenNguoiDung);
                 ChuanHoaChuoi(this->tenNguoiDung);
-                btenNguoiDung = false;
                 btotal = false;
                 continue;
             }
@@ -211,20 +209,14 @@ void GiaoDienDangKy::ThucHienDangKy(){
             if(this->tenTaiKhoan == "1"){
                 system("cls");
                 Nocursortype(FALSE);
-                gotoxy(50,10);
-                setTextColor(14,"Quay lại..");
-                Loading();
-                btenNguoiDung = true;
                 btenTaiKhoan = false;
+                btenNguoiDung = true;
                 continue;
             }
             if(this->tenTaiKhoan == "2"){
             	system("cls");
                 Nocursortype(FALSE);
-                gotoxy(50,10);
-                setTextColor(14,"Quay lại màn hình chính..");
-                Loading();
-                btenTaiKhoan = false;
+                RealityLoading("Quay lại..", btenTaiKhoan);
                 btotal = false;
                 continue;
             }
@@ -283,20 +275,14 @@ void GiaoDienDangKy::ThucHienDangKy(){
             if(this->matKhau == "1"){
             	system("cls");
                 Nocursortype(FALSE);
-                gotoxy(50,10);
-                setTextColor(14,"Quay lại..");
-                Loading();
-                btenTaiKhoan = true;
                 bmatKhau = false;
+                btenTaiKhoan = true;
                 continue;
             }
             if(this->matKhau == "2"){
             	system("cls");
                 Nocursortype(FALSE);
-                gotoxy(50,10);
-                setTextColor(14,"Quay lại màn hình chính..");
-                Loading();
-                bmatKhau = false;
+                RealityLoading("Quay lại..", bmatKhau);
                 btotal = false;
                 continue;
             }
@@ -378,6 +364,19 @@ void GiaoDienDangKy::InputCheckCin(std::string &input){
             break;
         }
     }
+}
+
+void GiaoDienDangKy::RealityLoading(const std::string TEXT, bool &check){
+    system("cls");
+    gotoxy(50, 14);
+    setTextColor(10,TEXT);
+    for( int i = 0; i < 10; i++ ){
+        gotoxy(50 + i, 15);
+        setTextColor(160, " ");
+        Sleep(120);
+    }
+    check = false;
+    system("cls");
 }
 
 std::string GiaoDienDangKy::AnMatKhau(std::string matKhau){

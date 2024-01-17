@@ -31,6 +31,7 @@ public:
     void InThuongChuoi(std::string &chuoi);
     void DaoNguocChuoi(std::string &chuoi);
     void Loading();
+    void RealityLoading(const std::string TEXT, bool &check);
     void NhapDeQuayLai();
     void InputCheckCin(std::string &input);
     std::string AnMatKhau(std::string matKhau);

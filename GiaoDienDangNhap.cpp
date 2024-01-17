@@ -64,10 +64,7 @@ void GiaoDienDangNhap::ThucHienDangNhap() {
             if(this->taiKhoan == "1"){
             	system("cls");
                 Nocursortype(FALSE);
-                gotoxy(50,10);
-                setTextColor(14,"Quay lại màn hình chính..");
-                Loading();
-                btaiKhoan = false;
+                RealityLoading("Quay lại màn hình chính..", btaiKhoan);
                 btotal = false;
                 setDangNhapThanhCong(false);
                 continue;
@@ -129,21 +126,16 @@ void GiaoDienDangNhap::ThucHienDangNhap() {
             }
             if(this->matKhau == "1"){
             	system("cls");
-                gotoxy(50,10);
                 Nocursortype(FALSE);
-                setTextColor(14,"Quay lại..");
-                Loading();
+                bmatKhau = false;
                 soLanNhap = 0;
                 btaiKhoan = true;
-                bmatKhau = false;
                 continue;
             }
             if(this->matKhau == "2"){
             	system("cls");
-                gotoxy(50,10);
                 Nocursortype(FALSE);
-                setTextColor(14,"Quay lại màn hình chính..");
-                Loading();
+                RealityLoading("Quay lại..", bmatKhau);
                 soLanNhap = 0;
                 bmatKhau = false;
                 btotal = false;

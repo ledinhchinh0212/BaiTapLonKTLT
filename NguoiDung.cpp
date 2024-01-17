@@ -745,10 +745,7 @@ void NguoiDung::TimKiemThongTinSach(bool &run, bool caseAdmin, std::string first
                             Nocursortype(FALSE);
                             if(keyTimKiem == "1"){
                                 system("cls");
-                                gotoxy(50,10);
-                                setTextColor(14,"Quay lại..");
-                                Loading();
-                                btimKiemNoiDung = false;
+                                RealityLoading("Quay lại..", btimKiemNoiDung);
                                 bTimKiemMain = false;
                                 continue;
                             }
@@ -806,10 +803,7 @@ void NguoiDung::TimKiemThongTinSach(bool &run, bool caseAdmin, std::string first
                             Nocursortype(FALSE);
                             if(keyTimKiem == "1"){
                                 system("cls");
-                                gotoxy(50,10);
-                                setTextColor(14,"Quay lại..");
-                                Loading();
-                                btimKiemNoiDung = false;
+                                RealityLoading("Quay lại..", btimKiemNoiDung);
                                 bTimKiemMain = false;
                                 continue;
                             }
@@ -867,10 +861,7 @@ void NguoiDung::TimKiemThongTinSach(bool &run, bool caseAdmin, std::string first
                             Nocursortype(FALSE);
                             if(keyTimKiem == "1"){
                                 system("cls");
-                                gotoxy(50,10);
-                                setTextColor(14,"Quay lại..");
-                                Loading();
-                                btimKiemNoiDung = false;
+                                RealityLoading("Quay lại..", btimKiemNoiDung);
                                 bTimKiemMain = false;
                                 continue;
                             }
@@ -928,10 +919,7 @@ void NguoiDung::TimKiemThongTinSach(bool &run, bool caseAdmin, std::string first
                             Nocursortype(FALSE);
                             if(keyTimKiem == "1"){
                                 system("cls");
-                                gotoxy(50,10);
-                                setTextColor(14,"Quay lại..");
-                                Loading();
-                                btimKiemNoiDung = false;
+                                RealityLoading("Quay lại..", btimKiemNoiDung);
                                 bTimKiemMain = false;
                                 continue;
                             }
@@ -989,10 +977,7 @@ void NguoiDung::TimKiemThongTinSach(bool &run, bool caseAdmin, std::string first
                             Nocursortype(FALSE);
                             if(keyTimKiem == "1"){
                                 system("cls");
-                                gotoxy(50,10);
-                                setTextColor(14,"Quay lại..");
-                                Loading();
-                                btimKiemNoiDung = false;
+                                RealityLoading("Quay lại..", btimKiemNoiDung);
                                 bTimKiemMain = false;
                                 continue;
                             }
@@ -1020,10 +1005,7 @@ void NguoiDung::TimKiemThongTinSach(bool &run, bool caseAdmin, std::string first
                     }
                     else if(y == 13 + this->VtenSach.size() + 11){
                         system("cls");
-                        gotoxy(50,10);
-                        setTextColor(14,"Quay lại..");
-                        Loading();
-                        bTimKiemMain = false;
+                        RealityLoading("Quay lại..", bTimKiemMain);
                         loop = false;
                     }
                     break;
@@ -1333,10 +1315,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                     Nocursortype(FALSE);
                                                     if(themTenNguoiDung == "1"){
                                                         system("cls");
-                                                        gotoxy(50,10);
-                                                        setTextColor(14,"Quay lại..");
-                                                        Loading();
-                                                        bthemNguoiDung = false;
+                                                        RealityLoading("Quay lại..", bthemNguoiDung);
                                                         bNhapChinhSuaTaiKhoan = false;
                                                         continue;
                                                     }
@@ -1428,10 +1407,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                     Nocursortype(FALSE);
                                                     if(copyUserID == "1"){
                                                         system("cls");
-                                                        gotoxy(50,10);
-                                                        setTextColor(14,"Quay lại..");
-                                                        Loading();
-                                                        bxoaNguoiDung = false;
+                                                        RealityLoading("Quay lại..", bxoaNguoiDung);
                                                         bNhapChinhSuaTaiKhoan = false;
                                                         continue;
                                                     }
@@ -1507,10 +1483,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                         Nocursortype(FALSE);
                                                         if(nhapUserIDNguoiDung == "1"){
                                                             system("cls");
-                                                            gotoxy(50,10);
-                                                            setTextColor(14,"Quay lại..");
-                                                            Loading();
-                                                            nhapUserID = false;
+                                                            RealityLoading("Quay lại..", nhapUserID);
                                                             bNhapChinhSuaTaiKhoan = false;
                                                             bSuaDoiThongTinNguoiDung = false;
                                                             continue;
@@ -1571,18 +1544,12 @@ void NguoiDung::QuanLiNguoiDung() {
                                                         Nocursortype(FALSE);
                                                         if(nhapTenNguoiDungMoi == "1"){
                                                             system("cls");
-                                                            gotoxy(50,10);
-                                                            setTextColor(14,"Quay lại..");
-                                                            Loading();
                                                             nhapThayDoiThongTin = false;
                                                             continue;
                                                         }
                                                         if(nhapTenNguoiDungMoi == "2"){
                                                             system("cls");
-                                                            gotoxy(50,10);
-                                                            setTextColor(14,"Quay lại..");
-                                                            Loading();
-                                                            nhapThayDoiThongTin = false;
+                                                            RealityLoading("Quay lại..", nhapThayDoiThongTin);
                                                             bSuaDoiThongTinNguoiDung = false;
                                                             bNhapChinhSuaTaiKhoan = false;
                                                             continue;
@@ -1651,10 +1618,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                             }
                                             else if(yy == 15){
                                                 system("cls");
-                                                gotoxy(50,10);
-                                                setTextColor(14,"Quay lại..");
-                                                Loading();
-                                                bNhapChinhSuaTaiKhoan = false;
+                                                RealityLoading("Quay lại..", bNhapChinhSuaTaiKhoan);
                                                 bloopnhapQuanLi = false;
                                                 bloopMainIn = false;
                                             }
@@ -1818,10 +1782,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                         Nocursortype(FALSE);
                                                         if(this->tenSach == "1"){
                                                             system("cls");
-                                                            gotoxy(50,10);
-                                                            setTextColor(14,"Quay lại..");
-                                                            Loading();
-                                                            btenSach = false;
+                                                            RealityLoading("Quay lại..", btenSach);
                                                             bThemSach = false;
                                                             bNhapChinhSuaTaiKhoan = false;
                                                             continue;
@@ -1863,19 +1824,13 @@ void NguoiDung::QuanLiNguoiDung() {
                                                         std::getline(std::cin, this->chuDe);
                                                         Nocursortype(FALSE);
                                                         if(this->chuDe == "1"){
-                                                            gotoxy(11,11);
-                                                            setTextColor(14, "Quay lại..");
-                                                            Loading();
                                                             btenSach = true;
                                                             bchuDe = false;
                                                             continue;
                                                         }
                                                         if(this->chuDe == "2"){
                                                             system("cls");
-                                                            gotoxy(50,10);
-                                                            setTextColor(14,"Thoát thêm sách..");
-                                                            Loading();
-                                                            bchuDe = false;
+                                                            RealityLoading("Thoát thêm sách..", bchuDe);
                                                             bThemSach = false;
                                                             bNhapChinhSuaTaiKhoan = false;
                                                             continue;
@@ -1922,19 +1877,13 @@ void NguoiDung::QuanLiNguoiDung() {
                                                         std::getline(std::cin, this->tacGia);
                                                         Nocursortype(FALSE);
                                                         if(this->tacGia == "1"){
-                                                            gotoxy(11,12);
-                                                            setTextColor(14, "Quay lại..");
-                                                            Loading();
                                                             bchuDe = true;
                                                             btacGia = false;
                                                             continue;
                                                         }
                                                         if(this->tacGia == "2"){
                                                             system("cls");
-                                                            gotoxy(50,10);
-                                                            setTextColor(14,"Thoát thêm sách..");
-                                                            Loading();
-                                                            btacGia = false;
+                                                            RealityLoading("Thoát thêm sách..", btacGia);
                                                             bThemSach = false;
                                                             bNhapChinhSuaTaiKhoan = false;
                                                             continue;
@@ -2000,20 +1949,14 @@ void NguoiDung::QuanLiNguoiDung() {
                                                         std::getline(std::cin, this->nhaXuatBan);
                                                         Nocursortype(FALSE);
                                                         if(this->nhaXuatBan == "1"){
-                                                            gotoxy(11,13);
-                                                            setTextColor(14, "Quay lại..");
-                                                            Loading();
                                                             btacGia = true;
                                                             bnhaXuatBan = false;
                                                             continue;
                                                         }
                                                         if(this->nhaXuatBan == "2"){
                                                             system("cls");
-                                                            gotoxy(50,10);
-                                                            setTextColor(14,"Thoát thêm sách..");
-                                                            Loading();
-                                                            nhapChinhSuaTaiKhoan = false;
-                                                            bnhaXuatBan = false;
+                                                            RealityLoading("Thoát thêm sách..", bnhaXuatBan);
+                                                            bNhapChinhSuaTaiKhoan = false;
                                                             bThemSach = false;
                                                             continue;
                                                         }
@@ -2065,8 +2008,6 @@ void NguoiDung::QuanLiNguoiDung() {
                                                         InputCheckCin(ngay);
                                                         Nocursortype(FALSE);
                                                         if(ngay.empty()){
-                                                            gotoxy(11,13);
-                                                            setTextColor( 14,"Quay lại..");
                                                             bngayThangXuatBan = false;
                                                             bnhaXuatBan = true;
                                                             continue;
@@ -2079,8 +2020,6 @@ void NguoiDung::QuanLiNguoiDung() {
                                                         InputCheckCin(thang);
                                                         Nocursortype(FALSE);
                                                         if(thang.empty()){
-                                                            gotoxy(11,13);
-                                                            setTextColor( 14,"Quay lại..");
                                                             bngayThangXuatBan = false;
                                                             bnhaXuatBan = true;
                                                             continue;
@@ -2093,8 +2032,6 @@ void NguoiDung::QuanLiNguoiDung() {
                                                         InputCheckCin(nam);
                                                         Nocursortype(FALSE);
                                                         if(nam.empty()){
-                                                            gotoxy(11,13);
-                                                            setTextColor( 14,"Quay lại..");
                                                             bngayThangXuatBan = false;
                                                             bnhaXuatBan = true;
                                                             continue;
@@ -2162,8 +2099,6 @@ void NguoiDung::QuanLiNguoiDung() {
                                                             continue;
                                                         }
                                                         if(this->soTrang.empty()){
-                                                            gotoxy(11,13);
-                                                            setTextColor( 14,"Quay lại..");
                                                             bsoTrang = false;
                                                             bngayThangXuatBan = true;
                                                             continue;
@@ -2223,8 +2158,6 @@ void NguoiDung::QuanLiNguoiDung() {
                                                         InputCheckCin(this->soBanCopyTrongThuVien);
                                                         Nocursortype(FALSE);
                                                         if(this->soBanCopyTrongThuVien.empty()){
-                                                            gotoxy(11,13);
-                                                            setTextColor( 14,"Quay lại..");
                                                             bsoBanCopyTrongThuVien = false;
                                                             bsoTrang = true;
                                                             continue;
@@ -2304,10 +2237,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                     }
                                                     if(nhapDeXoaSach == "2"){
                                                         system("cls");
-                                                        gotoxy(50,10);
-                                                        setTextColor(14,"Quay lại..");
-                                                        Loading();
-                                                        bxoaSach = false;
+                                                        RealityLoading("Quay lại..", bxoaSach);
                                                         bNhapChinhSuaTaiKhoan = false;
                                                         continue;
                                                     }
@@ -2376,10 +2306,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                     }
                                                     if(nhapDeChinhSua == "2"){
                                                         system("cls");
-                                                        gotoxy(50,10);
-                                                        setTextColor(14,"Quay lại..");
-                                                        Loading();
-                                                        bnhapQuanLi = false;
+                                                        RealityLoading("Quay lại..", bnhapQuanLi);
                                                         bNhapChinhSuaTaiKhoan = false;
                                                         continue;
                                                     }
@@ -2611,10 +2538,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                             Nocursortype(FALSE);
                                                                             if(tenSach == "1"){
                                                                                 system("cls");
-                                                                                gotoxy(50,10);
-                                                                                setTextColor(14,"Quay lại..");
-                                                                                Loading();
-                                                                                bchinhSuaTenSach = false;
+                                                                                RealityLoading("Quay lại..", bchinhSuaTenSach);
                                                                                 bsuadoithongtinsach = false;
                                                                                 continue;
                                                                             }
@@ -2675,9 +2599,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                             Nocursortype(FALSE);
                                                                             if(chuDeSach == "1"){
                                                                                 system("cls");
-                                                                                gotoxy(50,10);
-                                                                                setTextColor(14,"Quay lại..");
-                                                                                Loading();
+                                                                                RealityLoading("Quay lại..", bchinhSuaChuDeSach);
                                                                                 bchinhSuaChuDeSach = false;
                                                                                 bsuadoithongtinsach = false;
                                                                                 continue;
@@ -2725,10 +2647,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                             Nocursortype(FALSE);
                                                                             if(tacGiaSach == "1"){
                                                                                 system("cls");
-                                                                                gotoxy(50,10);
-                                                                                setTextColor(14,"Quay lại..");
-                                                                                Loading();
-                                                                                bchinhSuaTacGiaSach = false;
+                                                                                RealityLoading("Quay lại..", bchinhSuaTacGiaSach);
                                                                                 bsuadoithongtinsach = false;
                                                                                 continue;
                                                                             }
@@ -2791,10 +2710,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                             Nocursortype(FALSE);
                                                                             if(nhaXBSach == "1"){
                                                                                 system("cls");
-                                                                                gotoxy(50,10);
-                                                                                setTextColor(14,"Quay lại..");
-                                                                                Loading();
-                                                                                bchinhSuaNhaXBSach = false;
+                                                                                RealityLoading("Quay lại..", bchinhSuaNhaXBSach);
                                                                                 bsuadoithongtinsach = false;
                                                                                 continue;
                                                                             }
@@ -2945,11 +2861,8 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                                                 Nocursortype(FALSE);
                                                                                                 if(nhapNgayCanChinhSua.empty()){
                                                                                                     system("cls");
-                                                                                                    gotoxy(50,10);
-                                                                                                    setTextColor(14,"Quay lại..");
-                                                                                                    bchinhSuaNgay = false;
+                                                                                                    RealityLoading("Quay lại..", bchinhSuaNgay);
                                                                                                     bLuaChonNgayThangNam = false;
-                                                                                                    Loading();
                                                                                                     continue;
                                                                                                 }
                                                                                                 // cracking
@@ -2998,11 +2911,8 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                                                 Nocursortype(FALSE);
                                                                                                 if(nhapThangCanChinhSua.empty()){
                                                                                                     system("cls");
-                                                                                                    gotoxy(50,10);
-                                                                                                    setTextColor(14,"Quay lại..");
-                                                                                                    bchinhSuaThang = false;
+                                                                                                    RealityLoading("Quay lại..", bchinhSuaThang);
                                                                                                     bLuaChonNgayThangNam = false;
-                                                                                                    Loading();
                                                                                                     continue;
                                                                                                 }
                                                                                                 //
@@ -3051,11 +2961,8 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                                                 Nocursortype(FALSE);
                                                                                                 if(nhapNamCanChinhSua.empty()){
                                                                                                     system("cls");
-                                                                                                    gotoxy(50,10);
-                                                                                                    setTextColor(14,"Quay lại..");
-                                                                                                    bchinhSuaNam = false;
+                                                                                                    RealityLoading("Quay lại..", bchinhSuaNam);
                                                                                                     bLuaChonNgayThangNam = false;
-                                                                                                    Loading();
                                                                                                     continue;
                                                                                                 }
                                                                                                 //
@@ -3078,9 +2985,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                                         }
                                                                                         else if(y4 == 13){
                                                                                             system("cls");
-                                                                                            gotoxy(50,10);
-                                                                                            setTextColor(14,"Quay lại..");
-                                                                                            Loading();
+                                                                                            RealityLoading("Quay lại..", bLuaChonNgayThangNam);
                                                                                             bLuaChonNgayThangNam = false;
                                                                                             bchinhSuaNgayThangXuatBan = false;
                                                                                             bsuadoithongtinsach = false;
@@ -3130,7 +3035,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                             if(chinhSuaSoTrang.empty()){
                                                                                 chinhSuaSoTrang = this->VsoTrang[position];
                                                                             }
-                                                                            gotoxy(15,9);
+                                                                            gotoxy(16,9);
                                                                             textcolor(15);
                                                                             std::cout << this->VsoTrang[position] << " -> " << chinhSuaSoTrang << std::endl;
                                                                             Loading();
@@ -3172,7 +3077,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                             if(chinhSuaSoBanCopy.empty()){
                                                                                 chinhSuaSoBanCopy = this->VsoBanCopyTrongThuVien[position];
                                                                             }
-                                                                            gotoxy(15,9);
+                                                                            gotoxy(16,9);
                                                                             textcolor(15);
                                                                             std::cout << this->VsoBanCopyTrongThuVien[position] << " -> " << chinhSuaSoBanCopy << std::endl;
                                                                             Loading();
@@ -3183,10 +3088,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                     }
                                                                     else if(yyy == 21){
                                                                         system("cls");
-                                                                        gotoxy(50,10);
-                                                                        setTextColor(14,"Quay lại..");
-                                                                        Loading();
-                                                                        bsuadoithongtinsach = false;
+                                                                        RealityLoading("Quay lại..", bsuadoithongtinsach);
                                                                         bmainChinhSua = false;
                                                                     }
                                                                     break;
@@ -3270,9 +3172,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                                 }
                                                                 else if(yy == 13 + this->VtenSach.size() + 3){
                                                                     system("cls");
-                                                                    gotoxy(50,10);
-                                                                    setTextColor(14,"Quay lại..");
-                                                                    Loading();
+                                                                    RealityLoading("Quay lại..", bnhapInRaDanhSach);
                                                                     bnhapInRaDanhSach = false;
                                                                     bLoopDanhSachSach = false;
                                                                     bNhapChinhSuaTaiKhoan = false;
@@ -3286,9 +3186,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                             }
                                             else if(yy == 15){
                                                 system("cls");
-                                                gotoxy(50,10);
-                                                setTextColor(14,"Quay lại..");
-                                                Loading();
+                                                RealityLoading("Quay lại..", bNhapChinhSuaTaiKhoan);
                                                 bNhapChinhSuaTaiKhoan = false;
                                                 bloopnhapQuanLi = false;
                                                 bloopMainIn = false;
@@ -3302,9 +3200,7 @@ void NguoiDung::QuanLiNguoiDung() {
                         }
                         else if(y == 11){
                             system("cls");
-                            gotoxy(50,10);
-                            setTextColor(14,"..Đang đăng xuất");
-                            Loading();
+                            RealityLoading(" Đang đăng xuất..", bloopMainIn);
                             bloopMainIn = false;
                             bloopMain = false;
                         }
@@ -3468,10 +3364,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                             }
                                             else if(yy == 13 + this->VtenSach.size() + 3){
                                                 system("cls");
-                                                gotoxy(50,10);
-                                                setTextColor(14,"Quay lại..");
-                                                Loading();
-                                                bnhapInRaDanhSach = false;
+                                                RealityLoading("Quay lại..", bnhapInRaDanhSach);
                                                 bloopnhapQuanLi = false;
                                                 bloopMainIn = false;
                                             }
@@ -3609,10 +3502,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                     Nocursortype(FALSE);
                                                     if(tenNguoiDungThayDoi == "1"){
                                                         system("cls");
-                                                        gotoxy(50,10);
-                                                        setTextColor(14,"Quay lại..");
-                                                        Loading();
-                                                        bdoiTenNguoiDung = false;
+                                                        RealityLoading("Quay lại..", bdoiTenNguoiDung);
                                                         bNhapChinhSuaTaiKhoan = false;
                                                         continue;
                                                     }
@@ -3666,10 +3556,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                     Nocursortype(FALSE);
                                                     if(matKhauCu == "1"){
                                                         system("cls");
-                                                        gotoxy(50,10);
-                                                        setTextColor(14,"Quay lại..");
-                                                        Loading();
-                                                        bdoiMatKhau = false;
+                                                        RealityLoading("Quay lại..", bdoiMatKhau);
                                                         bNhapChinhSuaTaiKhoan = false;
                                                         continue;
                                                     }
@@ -3710,17 +3597,11 @@ void NguoiDung::QuanLiNguoiDung() {
                                                     Nocursortype(FALSE);
                                                     if(matKhauMoi == "1"){
                                                         system("cls");
-                                                        gotoxy(50,10);
-                                                        setTextColor(14,"Quay lại..");
-                                                        Loading();
                                                         continue;
                                                     }
                                                     if(matKhauMoi == "2"){
                                                         system("cls");
-                                                        gotoxy(50,10);
-                                                        setTextColor(14,"Quay lại..");
-                                                        Loading();
-                                                        bdoiMatKhau = false;
+                                                        RealityLoading("Quay lại..", bdoiMatKhau);
                                                         bNhapChinhSuaTaiKhoan = false;
                                                         continue;
                                                     }   
@@ -3788,10 +3669,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                                     Nocursortype(FALSE);
                                                     if(matKhauDelete == "1"){
                                                         system("cls");
-                                                        gotoxy(50,10);
-                                                        setTextColor(14,"Quay lại..");
-                                                        Loading();
-                                                        bxoaTaiKhoan = false;
+                                                        RealityLoading("Quay lại..", bxoaTaiKhoan);
                                                         bNhapChinhSuaTaiKhoan = false;
                                                         continue;
                                                     }
@@ -3847,9 +3725,7 @@ void NguoiDung::QuanLiNguoiDung() {
                                             }
                                             else if(yy == 13){
                                                 system("cls");
-                                                gotoxy(50,10);
-                                                setTextColor(14,"Quay lại..");
-                                                Loading();
+                                                RealityLoading("Quay lại..", bNhapChinhSuaTaiKhoan);
                                                 bNhapChinhSuaTaiKhoan = false;
                                                 bloopnhapQuanLi = false;
                                                 bloopMainIn = false;
@@ -3863,10 +3739,7 @@ void NguoiDung::QuanLiNguoiDung() {
                         }
                         if(y == 11){
                             system("cls");
-                            gotoxy(50,10);
-                            setTextColor(14,"..Đang đăng xuất");
-                            Loading();
-                            bloopMainIn = false;
+                            RealityLoading(" Đang đăng xuất..", bloopMainIn);
                             bloopMain = false;
                         }
                         break;
@@ -4011,8 +3884,10 @@ void NguoiDung::XuLiLuaChonDangNhapDangKy() {
                     }
                     else if(y == 19){
                         system("cls");
+                        gotoxy(50, 14);
+                        setTextColor(10,"Loading..");
                         for( int i = 0; i < 10; i++ ){
-                            gotoxy(20 + i, 10);
+                            gotoxy(50 + i, 15);
                             setTextColor(160, " ");
                             Sleep(120);
                         }
@@ -4065,4 +3940,4 @@ void NguoiDung::KhungNguoiDung(){
     else{
         setTextColor(15, "Thành viên");
     }
-}   
+}  
