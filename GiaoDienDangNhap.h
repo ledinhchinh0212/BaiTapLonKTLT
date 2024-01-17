@@ -1,5 +1,5 @@
-#ifndef KHONGBIETLUON_GIAODIENDANGNHAP_H
-#define KHONGBIETLUON_GIAODIENDANGNHAP_H
+#ifndef GIAODIENDANGNHAP_H
+#define GIAODIENDANGNHAP_H
 #include "GiaoDienDangKy.h"
 #include <conio.h>
 
@@ -24,4 +24,4 @@ public:
 };
 
 
-#endif //KHONGBIETLUON_GIAODIENDANGNHAP_H
+#endif 

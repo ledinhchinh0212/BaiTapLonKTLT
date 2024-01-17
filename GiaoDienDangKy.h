@@ -38,4 +38,4 @@ public:
 };
 
 
-#endif //KHONGBIETLUON_GIAODIENDANGKY_H
+#endif 

@@ -3877,20 +3877,109 @@ void NguoiDung::XuLiLuaChonDangNhapDangKy() {
                         bloopMain = false;
                     }
                     else if(y == 15){
-
+                        Copy = "3. Hướng dẫn sử dụng chương trình";
+                        // huong dan su dung chuong trinh
+                        system("cls");
+                        KhungGiaoDien();
+                        // thao tac
+                        gotoxy(18,5);
+                        setTextColor(14,"THAO TÁC");
+                        gotoxy(7,7);
+                        setTextColor(15,"- Sử dụng các nút");
+                        gotoxy(18 + 7, 7);
+                        setTextColor(12,"w, s");
+                        gotoxy(18 + 7 + 4, 7);
+                        setTextColor(15," để di chuyển");
+                        gotoxy(9,9);
+                        setTextColor(15,"lên xuống giữa các thanh lựa chọn");
+                        gotoxy(7,12);
+                        setTextColor(15,"- Nhấn các nút số để thực hiên lệnh");
+                        gotoxy(9,14);
+                        setTextColor(15,"nếu muốn và có thông báo");
+                        gotoxy(7,17);
+                        setTextColor(15,"- Sử dụng tài khoản và mật khẩu");
+                        gotoxy(9,19);
+                        setTextColor(15,"\"admin\" để đăng nhập với tư cách");
+                        gotoxy(9,21);
+                        setTextColor(15,"quản lí");
+                        gotoxy(7,24);
+                        setTextColor(15,"- Nhấn Enter để thực hiện các");
+                        gotoxy(9,26);
+                        setTextColor(15,"thanh lựa chọn in đậm");
+                        // chu y
+                        gotoxy(84,5);
+                        setTextColor(14,"CHÚ Ý");
+                        gotoxy(68,7);
+                        setTextColor(15,"- Chú ý phần thông báo để biết cách");
+                        gotoxy(68 + 13,7);
+                        setTextColor(10,"thông báo");
+                        gotoxy(68 + 13 + 9,7);
+                        setTextColor(15," để biết cách");
+                        gotoxy(70,9);
+                        setTextColor(15,"thoát khỏi phần của chương trình");
+                        gotoxy(70,11);
+                        setTextColor(15,"hoặc các thao tác khác");
+                        gotoxy(68,14);
+                        setTextColor(15,"- Chương trình sử dụng 98.99% kiến");
+                        gotoxy(70,16);
+                        setTextColor(15,"thức, kinh nghiệm code trước đây");
+                        // nhap nut bat ki de thoat
+                        gotoxy(70,21);
+                        setTextColor(14,"Nhập nút bất kì để thoát");
+                        gotoxy(70 + 25,21);
+                        Nocursortype(TRUE);
+                        char anyKey = _getch();
+                        bloopMain = false;
+                        system("cls");
                     }
                     else if(y == 17){
-                        
+                        Copy = "4. Thông tin bài tập lớn";
+                        // thong tin bai tap lon
+                        system("cls");
+                        KhungGiaoDien();
+                        // code chuong trinh
+                        gotoxy(20,5);
+                        setTextColor(10,"Code chương trình");
+                        gotoxy(14,7);
+                        setTextColor(15,"Lê Đình Chinh 044205008554");
+                        // tester
+                        gotoxy(24,11);
+                        setTextColor(11,"Tester");
+                        gotoxy(14,13);
+                        setTextColor(15,"Nguyễn Duy Vũ 077205012865");
+                        gotoxy(14,15);
+                        setTextColor(15,"Lê Đình Chinh 044205008554");
+                        gotoxy(14,17);
+                        setTextColor(15,"Phạm Hoàng Vinh 064205013978");
+                        // viet bao cao
+                        gotoxy(20 + 50,5);
+                        setTextColor(14,"Viết report");
+                        gotoxy(14 + 50,7);
+                        setTextColor(15,"Nguyễn Duy Vũ 077205012865");
+                        // lam youtube
+                        gotoxy(20 + 50,11);
+                        setTextColor(12,"Làm youtube");
+                        gotoxy(14 + 50,13);
+                        setTextColor(15,"Lê Đình Chinh 044205008554");
+                        // nhap de thoat
+                        gotoxy(14 + 26,24);
+                        setTextColor(15,"Nhập nút bất kì để thoát");
+                        gotoxy(40 + 25,24);
+                        Nocursortype(TRUE);
+                        char anyKey = _getch();
+                        bloopMain = false;
+                        system("cls");
                     }
                     else if(y == 19){
                         system("cls");
-                        gotoxy(50, 14);
-                        setTextColor(10,"Loading..");
-                        for( int i = 0; i < 10; i++ ){
-                            gotoxy(50 + i, 15);
+                        gotoxy(47 - 4, 14);
+                        setTextColor(10," Đang thoát khỏi chương trình..");
+                        for( int i = 0; i < 30; i++ ){
+                            gotoxy(47 - 4 + i, 15);
                             setTextColor(160, " ");
                             Sleep(120);
                         }
+                        system("cls");
                         bloopMain = false;
                         loop = false;
                     }
